@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joluro...</title>
+    <script src="https://kit.fontawesome.com/729bf5851b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script> <!-- Íconos Lucide -->
+    <script src="https://kit.fontawesome.com/729bf5851b.js" crossorigin="anonymous"></script>
+    <!-- Íconos FontAwesome -->
+    <script defer>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script>
+    <script>
+        lucide.createIcons(); // Carga los íconos Lucide
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lucide.createIcons(); // Asegura que los íconos carguen bien
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[#fdfefe] font-sans">
+
+    <!-- Header -->
+    <header
+        class="font-bold flex py-4 px-6 md:px-20 justify-between items-center w-full text-[#e74c3c] bg-white shadow-sm">
+        <!-- Logo y título -->
+        <div class="text-center">
+            <h1 class="text-2xl md:text-4xl">Joluro</h1>
+            <p class="text-sm md:text-base text-gray-700">Desarrollador Web</p>
+        </div>
+
+        <!-- Menú de navegación (oculto en móviles) -->
+        <nav class="hidden md:flex">
+            <ul class="flex items-center gap-6">
+                <li><a href="#sobre-mi" class="hover:text-red-600 transition">Sobre mí</a></li>
+                <li><a href="#servicios" class="hover:text-red-600 transition">Servicios</a></li>
+                <li><a href="#contacto" class="hover:text-red-600 transition">Contacto</a></li>
+                <li class="flex gap-3">
+                    <a href="https://facebook.com" target="_blank" class="text-xl hover:text-red-600 transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" class="text-xl hover:text-red-600 transition">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-xl hover:text-red-600 transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Botón de menú en móviles -->
+        <button id="menu-toggle" class="md:hidden bg-gray-100 p-2 rounded-lg shadow-md transition hover:bg-gray-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Menú desplegable para móviles -->
+    <nav id="mobile-menu"
+        class="hidden flex-col bg-white text-red-500 p-4 absolute top-16 right-6 shadow-md rounded-lg transition">
+        <ul class="flex flex-col gap-4">
+            <li><a href="#sobre-mi" class="hover:text-red-600">Sobre mí</a></li>
+            <li><a href="#servicios" class="hover:text-red-600">Servicios</a></li>
+            <li><a href="#contacto" class="hover:text-red-600">Contacto</a></li>
+            <div class="flex justify-center gap-4 mt-2">
+                <a href="https://facebook.com" target="_blank" class="text-xl hover:text-red-600 transition">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="text-xl hover:text-red-600 transition">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-xl hover:text-red-600 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </ul>
+    </nav>
+
+
+
+    <!-- Contenido Principal -->
+    <main class="max-w-4xl mx-auto md:p-4">
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="mb-8 flex flex-col md:flex-row-reverse gap-6 md:gap-12 p-8 bg-[#fbeee6] md:rounded-lg shadow-md">
+            <div class="md:w-1/2 text-center">
+                <img src="img_joluro_2.jpg" class="mx-auto rounded-lg shadow-md" width="250px"
+                    alt="Foto de Jorge Rodríguez">
+            </div>
+            <div class="md:w-1/2 md:text-left">
+                <h2 class="text-2xl font-semibold mb-2 text-gray-800">Sobre mí</h2>
+                <p class="text-gray-700">
+                    Hola, soy Jorge Rodríguez, un apasionado del desarrollo de software. Me especializo en
+                    <strong>páginas web y automatización</strong>, creando soluciones digitales que optimizan
+                    procesos y potencian negocios. Mi misión es transformar ideas en herramientas tecnológicas
+                    eficientes y escalables.
+                </p>
+                <!-- Botón minimalista -->
+                <a href="https://wa.me/1234567890" target="_blank" class="mt-4 inline-block bg-[#e74c3c] text-white px-6 py-2 rounded-full text-sm font-medium 
+                          transition-all duration-300 hover:bg-[#c0392b]">
+                    📩 Contáctame
+                </a>
+            </div>
+        </section>
+
+
+
+        <!-- Servicios -->
+        <!-- Servicios -->
+        <section id="servicios" class="mb-8 p-8 text-center">
+            <h2 class="text-3xl font-semibold mb-6 text-gray-800">Servicios</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Servicio 1 -->
+                <div
+                    class="p-6 bg-white rounded-xl shadow-[0_4px_10px_rgba(231,76,60,0.2)] hover:shadow-[0_6px_15px_rgba(231,76,60,0.3)] transition">
+                    <i class="fa-solid fa-laptop-code text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold">Desarrollo Web</h3>
+                    <p class="text-gray-600 text-sm mt-2">Creación de sitios web modernos, optimizados y adaptables a
+                        cualquier pantalla.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div
+                    class="p-6 bg-white rounded-xl shadow-[0_4px_10px_rgba(231,76,60,0.2)] hover:shadow-[0_6px_15px_rgba(231,76,60,0.3)] transition">
+                    <i class="fa-solid fa-file-excel text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold">Automatización con Macros</h3>
+                    <p class="text-gray-600 text-sm mt-2">Optimización de procesos repetitivos en Excel con macros
+                        avanzadas.</p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div
+                    class="p-6 bg-white rounded-xl shadow-[0_4px_10px_rgba(231,76,60,0.2)] hover:shadow-[0_6px_15px_rgba(231,76,60,0.3)] transition">
+                    <i class="fa-solid fa-gears text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold">Optimización de Procesos</h3>
+                    <p class="text-gray-600 text-sm mt-2">Mejoro la eficiencia de tus flujos de trabajo mediante
+                        software y automatización.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contacto -->
+        <section id="contacto" class="p-8 bg-[#fbeee6] w-full text-center md:rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4 text-gray-800">Contacto</h2>
+
+            <p class="text-gray-700 text-lg">
+                Escríbeme a
+                <a href="mailto:contacto@jolurosoft.com" class="text-[#e74c3c] font-semibold underline">
+                    contacto@jolurosoft.com
+                </a>
+            </p>
+
+            <!-- Botón de WhatsApp -->
+            <div class="mt-6 flex justify-center">
+                <a href="https://wa.me/573001234567" target="_blank" class="flex items-center gap-3 bg-green-500 text-white px-6 py-3 rounded-full shadow-md 
+                   hover:bg-green-600 hover:shadow-lg transition">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span class="text-lg font-medium">Escríbeme por WhatsApp</span>
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 md:bg-[#fbeee6] text-center text-gray-700 text-lg">
+        <p>&copy; 2025 <span class="font-semibold">Joluro Soft</span> - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para mostrar/ocultar el menú en móviles -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
